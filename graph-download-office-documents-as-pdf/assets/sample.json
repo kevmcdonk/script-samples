@@ -1,0 +1,55 @@
+[
+  {
+    "name": "graph-download-office-documents-as-pdf",
+    "source": "pnp",
+    "title": "Download Library contents as PDF",
+    "shortDescription": "Script to download files in a doclib to a local drive and convert Office Documents to PDF",
+    "url": "https://pnp.github.io/script-samples/graph-download-office-documents-as-pdf/README.html",
+    "longDescription": [
+      "Script to download files in a doclib to a local drive and convert Office Documents to PDF"
+    ],
+    "creationDateTime": "2021-08-13",
+    "updateDateTime": "2021-08-13",
+    "products": [
+      "SharePoint",
+      "Graph"
+    ],
+    "metadata": [
+      {
+        "key": "POWERSHELL",
+        "value": "7.2.0"
+      }
+    ],
+    "categories": [
+      "Configure"
+    ],
+    "tags": [
+      "Document Library",
+      "Conversion",
+      "PDF"
+    ],
+    "thumbnails": [
+      {
+        "type": "image",
+        "order": 100,
+        "url": "https://raw.githubusercontent.com/pnp/script-samples/main/scripts/graph-download-office-documents-as-pdf/assets/preview.png",
+        "alt": "This sample does not contain a preview image"
+      }
+    ],
+    "authors": [
+      {
+        "gitHubAccount": "russgove",
+        "company": "",
+        "pictureUrl": "https://avatars.githubusercontent.com/u/2412956?v=4",
+        "name": "Russell Gove"
+      }
+    ],
+    "references": [
+      {
+        "name": "Want to learn more about the Microsoft Graph",
+        "description": "Check out the documentation site to get started and for the reference to the endpoints.",
+        "url": "https://developer.microsoft.com/en-us/graph/graph-explorer"
+      }
+    ]
+  }
+]

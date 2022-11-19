@@ -33,12 +33,41 @@
     
     
     <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples" title="Go to repository">
+               <div class="github-wrapper">
+                  <div class="github-icon">
+                    <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+                  </div>
+                  <div class="github-repository">
+                    <span>GitHub</span>
+                    <ul class="github-facts">
+                      <li>
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>
+                        <span class="github-forks"></span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span class="github-stars"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,7 +93,7 @@
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/script-samples/blob/main/scripts/spo-ensure-siteassets-library/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/kevmcdonk/script-samples/blob/main/scripts/spo-ensure-siteassets-library/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
                     <h1 id="ensure-the-site-assets-library-is-created">Ensure the Site Assets Library is created</h1>
 
@@ -78,7 +107,6 @@ Reference: <a href="https://github.com/pnp/cli-microsoft365/discussions/1427">'e
 <li>calls the _api/web/Lists/EnsureSiteAssetsLibrary REST endpoint to create the Site Assets library</li>
 <li>returns the existing or created SPList as a JSON object</li>
 </ul>
-<p><img src="assets/example.png" alt="Example Screenshot"></p>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
@@ -101,20 +129,15 @@ function EnsureSiteAssetsLibrary {
     https://&lt;tenant&gt;.sharepoint.com/sites/&lt;sitename&gt;/_api/web/Lists/EnsureSiteAssetsLibrary/
     which returns an SPList
   #&gt;
-  $list = $null
-
   Write-Host &quot;-&gt; Ensure Site Assets library: $siteUrl&quot;
-  $lists = m365 spo list list --webUrl &quot;$siteUrl&quot; -o json | ConvertFrom-Json
-  if (($null -ne $lists) -and ($null -ne $lists.value)) {
-    $list = $lists.value | Where-Object { $_.Title -eq &quot;Site Assets&quot; }
-  }
+  $list = m365 spo list get --webUrl $siteUrl --title &quot;Site Assets&quot; | ConvertFrom-Json
 
   if ($null -eq $list) {
     Write-Host &quot;...Creating Site Assets library&quot;
 
     try {
       $resource = ($siteUrl -split &quot;/&quot;)[2]
-      $accessToken = m365 util accesstoken get --resource &quot;https://$resource&quot;
+      $accessToken = m365 util accesstoken get --resource &quot;https://$resource&quot; --output text
     }
     catch {
       throw &quot;!! Unable to get AccessToken for EnsureSiteAssetsLibrary at '$siteUrl'`nERROR: $_&quot;
@@ -156,11 +179,14 @@ function EnsureSiteAssetsLibrary {
 <tr>
 <td>Phillip Allan-Harding</td>
 </tr>
+<tr>
+<td>Martin Lingstuyl</td>
+</tr>
 </tbody>
 </table>
 <h2 id="disclaimer">Disclaimer</h2>
 <p><strong>THESE SAMPLES ARE PROVIDED <em>AS IS</em> WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.</strong></p>
-<img src="https://telemetry.sharepointpnp.com/script-samples/scripts/spo-ensure-siteassets-library" aria-hidden="true">
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/scripts/spo-ensure-siteassets-library" aria-hidden="true">
 </article>
           </div>
         </div>

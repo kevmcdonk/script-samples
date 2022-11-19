@@ -33,12 +33,41 @@
     
     
     <meta property="docfx:newtab" content="true">
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "8j6pedl344");
+  </script>
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
+             <div class="github-mark">
+              <a href="https://github.com/pnp/script-samples" title="Go to repository">
+               <div class="github-wrapper">
+                  <div class="github-icon">
+                    <img src="https://pnp.github.io/script-samples/assets/icons/github-light-64px.png" alt="GitHub Icon Image">
+                  </div>
+                  <div class="github-repository">
+                    <span>GitHub</span>
+                    <ul class="github-facts">
+                      <li>
+                        <i class="fa fa-code-fork" aria-hidden="true"></i>
+                        <span class="github-forks"></span>
+                      </li>
+                      <li>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span class="github-stars"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,7 +93,7 @@
           <div class="col-md-12">
             <article class="content wrap" id="_content" data-uid="">
                   <div class="contribution-panel mobile-hide pull-right">
-                      <a href="https://github.com/pnp/script-samples/blob/main/scripts/flow-inventory-flows-by-author/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
+                      <a href="https://github.com/kevmcdonk/script-samples/blob/main/scripts/flow-inventory-flows-by-author/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
                     <h1 id="inventory-flows-by-creator">Inventory Flows By Creator</h1>
 
@@ -72,14 +101,13 @@
 <p>The <a href="https://admin.flow.microsoft.com/">Power Automate Admin Center</a> provides a list of the Flows in your tenant, but there is no way to easily export Flows from the Flow admin center for governance activities. This script retrieves Flows from the Default Environment and maps creator information from Azure AD to list Flows by owner, state and trigger type.</p>
 <p>The <code>bash</code> version of this script uses an external file to process owner mapping. This is provided in the jq tab and should be saved to the same folder as the bash script and named
 <code>marge.jq</code>.</p>
-<p><img src="assets/example.png" alt="Example Screenshot"></p>
 <div class="tabGroup" id="tabgroup_CeZOj-G++Q">
 <ul role="tablist">
 <li role="presentation">
 <a href="#tabpanel_CeZOj-G++Q_cli-m365-ps" role="tab" aria-controls="tabpanel_CeZOj-G++Q_cli-m365-ps" data-tab="cli-m365-ps" tabindex="0" aria-selected="true">CLI for Microsoft 365 with PowerShell</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_CeZOj-G++Q_m365cli-bash" role="tab" aria-controls="tabpanel_CeZOj-G++Q_m365cli-bash" data-tab="m365cli-bash" tabindex="-1">Microsoft 365 CLI with Bash</a>
+<a href="#tabpanel_CeZOj-G++Q_m365cli-bash" role="tab" aria-controls="tabpanel_CeZOj-G++Q_m365cli-bash" data-tab="m365cli-bash" tabindex="-1">CLI for Microsoft 365 with Bash</a>
 </li>
 <li role="presentation">
 <a href="#tabpanel_CeZOj-G++Q_m365cli-jq" role="tab" aria-controls="tabpanel_CeZOj-G++Q_m365cli-jq" data-tab="m365cli-jq" tabindex="-1">jq</a>
@@ -294,7 +322,7 @@ fi
 </table>
 <h2 id="disclaimer">Disclaimer</h2>
 <p><strong>THESE SAMPLES ARE PROVIDED <em>AS IS</em> WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.</strong></p>
-<img src="https://telemetry.sharepointpnp.com/script-samples/scripts/flow-inventory-flows-by-author" aria-hidden="true">
+<img src="https://pnptelemetry.azurewebsites.net/script-samples/scripts/flow-inventory-flows-by-author" aria-hidden="true">
 </article>
           </div>
         </div>
