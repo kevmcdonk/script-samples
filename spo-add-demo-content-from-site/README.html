@@ -4,15 +4,15 @@
   
   <head>
     <meta charset="utf-8">
-    <title>Add demo content files to a SharePoint library | PnP Samples </title>
+    <title>Add demo content from a website such as Wikipedia | PnP Samples </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Add demo content files to a SharePoint library | PnP Samples ">
+    <meta name="title" content="Add demo content from a website such as Wikipedia | PnP Samples ">
     <meta name="generator" content="docfx 2.56.7.0">
     <meta name="description" content="A sample gallery of scripts to manage all things Microsoft 365.">
   
     <!-- Social Media -->
     <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content="Add demo content files to a SharePoint library | PnP Samples ">
+    <meta property="og:title" content="Add demo content from a website such as Wikipedia | PnP Samples ">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pnp.github.io/script-samples">
     <meta property="og:image" content="https://pnp.github.io/script-samples/assets/social-media-screenshot.png">
@@ -95,7 +95,7 @@
                   <div class="contribution-panel mobile-hide pull-right">
                       <a href="https://github.com/kevmcdonk/script-samples/blob/main/scripts/spo-add-demo-content-from-site/README.md/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-                    <h1 id="add-demo-content-files-to-a-sharepoint-library">Add demo content files to a SharePoint library</h1>
+                    <h1 id="add-demo-content-from-a-website-such-as-wikipedia">Add demo content from a website such as Wikipedia</h1>
 
 <h2 id="summary">Summary</h2>
 <p>This sample shows how you can generate a set of demo content from a website such as Wikipedia. This is intended to build content for testing, especially for systems such as Viva Topics. The content may not render perfectly but build out a load of documents in the environment.</p>
@@ -130,16 +130,16 @@
         - Pandoc must be installed - https://pandoc.org/installing.html
     
     .EXAMPLE
-    .\GenerateDocs.ps1 -TargetUrl https://cpsdemos.sharepoint.com/sites/DemoContent-SharePoint -WebUrl &quot;https://www.mcd79.com&quot;
+    .\GenerateDocs.ps1 -TargetUrl https://contoso.sharepoint.com/sites/DemoContent-SharePoint -WebUrl &quot;https://www.mcd79.com&quot;
 
     .EXAMPLE
-    .\GenerateDocs.ps1 -TargetUrl https://cpsdemos.sharepoint.com/sites/DemoContent-SharePoint -TargetLibrary &quot;Content&quot; -WebUrl &quot;https://www.mcd79.com&quot;
+    .\GenerateDocs.ps1 -TargetUrl https://contoso.sharepoint.com/sites/DemoContent-SharePoint -TargetLibrary &quot;Content&quot; -WebUrl &quot;https://www.mcd79.com&quot;
 
     .EXAMPLE
-    .\GenerateDocs.ps1 -TargetUrl https://cpsdemos.sharepoint.com/sites/DemoContent-SharePoint -WebUrl &quot;https://www.wikipedia.org&quot; -WebExtension &quot;wiki/SharePoint&quot;
+    .\GenerateDocs.ps1 -TargetUrl https://contoso.sharepoint.com/sites/DemoContent-SharePoint -WebUrl &quot;https://www.wikipedia.org&quot; -WebExtension &quot;wiki/SharePoint&quot;
 
     .EXAMPLE
-    .\GenerateDocs.ps1 -TargetUrl https://cpsdemos.sharepoint.com/sites/DemoContent-SharePoint -WebUrl &quot;https://www.wikipedia.org&quot; -WebExtension &quot;wiki/SharePoint&quot; -maxLinks 5000 -maxLevels 5
+    .\GenerateDocs.ps1 -TargetUrl https://contoso.sharepoint.com/sites/DemoContent-SharePoint -WebUrl &quot;https://www.wikipedia.org&quot; -WebExtension &quot;wiki/SharePoint&quot; -maxLinks 5000 -maxLevels 5
 
     .PARAMETER WebUrl
     The base URL of the webpage to be inventoried e.g. https://www.wikipedia.org
